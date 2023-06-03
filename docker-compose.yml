@@ -1,0 +1,12 @@
+version: '3'
+services:
+  flutter-dev:
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    volumes:
+      - ./app:/app/app
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+    stdin_open: true
+    tty: true
